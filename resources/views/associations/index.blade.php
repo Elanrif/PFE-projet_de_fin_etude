@@ -9,7 +9,7 @@
       <img src="{{asset('images/'.$association->photo)}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Nom des associations : {{$association->nom}}</h5>
-        <p class="card-text">{{$association->mini_description}}.</p>
+        <p class="card-text">{{$association->date}}.</p>
       </div>
     </div>
   </div>
