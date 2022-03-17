@@ -1,7 +1,7 @@
 
 
-@extends('layout')
-@section('associations')
+@extends('../source/layout')
+@section('content')
 <div class="row container-fluid row-cols-1 row-cols-md-3 g-4 pb-5">
   @foreach($associations as $association)
   <div class="col">
