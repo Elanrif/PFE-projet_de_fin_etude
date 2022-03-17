@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;300&display=swap');
+*{
+ --bisque-- : #C4E0F9;
+ --blanc--: #FFFBFC ;  /*#FFFBFC ;*/
+ --bleu_ciel--: #449DD1 ; 
+ --noir--: #00072D ;
+ --bleu--: #232ED1;
+
+ font-family: 'Poppins', sans-serif;
+ /* font-family: 'Lobster', cursive; */
+}
+
+.liens{
+  background-color: var(--noir--);
+  color:var(--blanc--);
+  padding-top:50px;
+}
+/*
+.connexion{ 
+  background: linear-gradient(rgba(10, 10, 10, 0.9),rgba(15, 15, 15, 0.9)), url('../images/jeune_etudiants.webp') no-repeat center center / cover;
+  width:auto; 
+  height:auto;
+}
+*/
+#newsletter{ 
+  padding-left:100px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bisque--);
+  color:var(--noir--);
+}
+
+.index1{ 
+  z-index:-1; 
+  
+}
+.card_1{ 
+  box-shadow: 12px 12px 2px 1px var(--bisque--);
+}
+
+.index2{
+  z-index:1;
+}
+
+/* pour l'image en linear-gradient*/
+.linear{ 
+  background: linear-gradient(rgb(0,0,0,0.5),#0676d1) , url(../images/esma.jpg) center / cover no-repeat  ;
+  height:100vh;
+}
+
+.linear img { 
+  position : relative ; 
+  top:10px ; 
+  right: 15px ;
+  left:20px;
+   height:200px;
+   opacity:0.2; 
+   
+}
+
+/* */
+@media screen and (max-width:970px) {
+
+    #newsletter{ 
+        padding-top:0px;
+        margin-left:0px;
+    }
+    .forms{ 
+      width:70%;
+    }
+   
+    .togle > * {
+      margin-bottom: 5px;
+      margin-top:5px;
+    }
+
+}
