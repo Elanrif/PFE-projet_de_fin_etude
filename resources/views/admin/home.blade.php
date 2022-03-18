@@ -38,6 +38,9 @@
         <a class="nav-link text-light" href="{{route('association.index')}}"><i class="fa-solid fa-layer-group me-2"></i>Associations</a>
       </li>
        <li class="nav-item">
+        <a class="nav-link text-light" href="#"><i class="fa-solid fa-calendar-week me-2"></i>Evènements</a>
+      </li>
+       <li class="nav-item">
         <a class="nav-link text-light" href="#"><i class="fa-solid fa-user-group me-2"></i>Bureau</a>
       </li>
    
