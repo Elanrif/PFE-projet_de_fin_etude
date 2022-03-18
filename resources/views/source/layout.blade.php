@@ -13,25 +13,28 @@
    <!--header-->
   <nav class="index2 navbar navbar-expand-lg navbar-light bg-light" style="height:100px;">
   <div class="container-fluid fs-4">
-    <a class="navbar-brand ps-5" href="#">Logo Etudiants</a>
+    <a class="navbar-brand ps-5" href="/">Logo Etudiants</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse bg-light Z-index-3 ps-3" id="navbarSupportedContent">
       <ul class="index navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item px-3">
-          <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+          <a class="nav-link active" aria-current="page" href="/">Acceuil</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link active" href="#">Presentation</a>
         </li>
 
         <li class="nav-item px-3">
-          <a class="nav-link active" href="#">Associations</a>
+          <a class="nav-link active" href="{{route('associations.index')}}">Associations</a>
         </li>
-         <li class="nav-item px-3">
-          <a class="nav-link active " href="#">Avantage</a>
+        
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="/Home">admin</a>
         </li>
+        
+        
 
         <li class="nav-item dropdown px-3">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

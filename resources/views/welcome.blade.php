@@ -40,6 +40,8 @@
 -->
 
 <!-- image avec linear gradient -->
+
+
 <div class="linear container-fluid"> <!-- ici il y'a l'image en des etudiants voir liens CSS -->
   <div class="pt-2">
     <img src="{{asset('images/Université-Abdelmalek-Essaâdi.jpg')}}" > <!-- le logo de la FAC -->
@@ -140,7 +142,89 @@
 
 <!-- -->
 
+<!--quelque exemples d'evenements -->
 
+
+ <h3 class="my-2 ps-4 text-center my-2" style="color:var(--bleu_ciel--); font-size:80px;font-family: 'Lobster', cursive;"> Les Evènements associatifs  . </h3>
+ <div class="row container-fluid row-cols-1 row-cols-md-5 g-4 pb-5 ">
+    <div class="col">
+      <div class="card h-100">
+      <img src="{{asset('images/assos-etudiant-4__1_.webp')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{asset('images/assos-etudiant-4__1_.webp')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a short card.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{asset('images/assos-etudiant-4__1_.webp')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{asset('images/assurance_association_sportive.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{asset('images/assurance_association_sportive.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{asset('images/assurance_association_sportive.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -->
+<!-- pour manar un exemple 
+<div class="container-fluid mb-3">
+  <div class="row row-cols-1 row-cols-md-3 g-2">
+
+
+    <div class="col">
+      <div class="p-3 h-100 border bg-dark text-white"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem voluptatibus voluptas nihil! Magni ipsa iusto rerum, sunt in nemo veniam nostrum amet placeat ullam similique. Culpa corrupti quibusdam nam vel explicabo, id beatae? Tempore corrupti excepturi delectus esse consequatur id, suscipit nihil dicta placeat iusto a nemo natus debitis facere, distinctio qui? Itaque aut, maiores veniam consectetur, in et dolor, nam ea expedita sapiente asperiores quaerat quisquam laborum possimus. Repudiandae aliquid accusamus non, a amet asperiores voluptas ullam dolore distinctio molestias culpa quam minima ut sit ipsam. Quam, ipsum eum assumenda excepturi quaerat distinctio obcaecati debitis itaque ab error ea!</div>
+    </div>
+    <div class="col">
+      <div class="p-3 h-100 border  bg-dark text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nesciunt ex deleniti laborum incidunt ipsa, quia voluptate enim similique hic illo, delectus reiciendis dolor amet officiis et quas. Ipsa quia voluptates ab optio adipisci aliquam recusandae aliquid. Dolorem blanditiis voluptate distinctio quia quasi eius doloribus, possimus nam sequi ex rerum aut officiis nesciunt officia accusamus nostrum animi autem delectus? Est nam commodi et eveniet nobis, omnis nostrum dolore excepturi quis sapiente mollitia explicabo unde quam architecto tenetur reiciendis aliquid. Sint et molestias fugit autem magnam? Accusamus dolores quaerat, eaque accusantium temporibus maxime, repellat inventore nisi voluptate, ipsa ab delectus enim!</div>
+    </div>
+    <div class="col ">
+      <div class="p-3 h-100 border bg-dark text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse dignissimos culpa itaque alias omnis recusandae facilis et eaque minus soluta sunt molestiae corrupti ullam obcaecati eligendi fugiat numquam corporis ipsam, accusamus error nihil. Possimus tempora repudiandae, sit sapiente ex molestiae neque assumenda amet adipisci! Aut rerum alias officia. Consectetur eligendi nihil iure dicta incidunt molestias, voluptatem inventore dolorem perspiciatis ipsam nobis at doloribus. Odit voluptatum beatae minima voluptatibus laborum iste quaerat dolor qui cupiditate tempora id doloremque earum accusantium mollitia est, blanditiis facilis recusandae hic iusto optio totam fuga eius vitae impedit! Maiores qui debitis voluptatem voluptatum eos rerum?</div>
+    </div>
+    <div class="col ">
+      <div class="p-3 h-100 border bg-dark text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia recusandae doloribus ratione aliquid rem adipisci natus ullam et officia! Illo officiis est suscipit, voluptatem explicabo natus accusantium nihil obcaecati hic veniam quasi culpa blanditiis cupiditate et similique quia labore minima sapiente quos nesciunt expedita! Facere quidem ut, libero placeat magni ipsa harum veniam quas pariatur, ratione officiis aperiam vero obcaecati, architecto dolor ab explicabo neque. Dicta saepe dolorem eum adipisci aspernatur nisi, aliquam dolorum nulla non reprehenderit ipsum eos. Tenetur vel, eaque fugiat maiores doloremque officiis odio omnis eos porro repellat dolorem, dolor illum sint ipsam tempore, veritatis ut.</div>
+    </div>
+  </div>
+</div>
+
+-->
 
 <!-- quelques associations -->
  @yield('associations')

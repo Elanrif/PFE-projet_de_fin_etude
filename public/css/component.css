@@ -16,6 +16,8 @@
   color:var(--blanc--);
   padding-top:50px;
 }
+
+/*page admin */
 /*
 .connexion{ 
   background: linear-gradient(rgba(10, 10, 10, 0.9),rgba(15, 15, 15, 0.9)), url('../images/jeune_etudiants.webp') no-repeat center center / cover;
@@ -59,6 +61,11 @@
    
 }
 
+/*page admin */
+.admin{
+   height:100vh;
+}
+
 /* */
 @media screen and (max-width:970px) {
 
@@ -74,5 +81,6 @@
       margin-bottom: 5px;
       margin-top:5px;
     }
+
 
 }

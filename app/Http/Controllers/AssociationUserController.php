@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Association;
 use Illuminate\Http\Request;
 
-class AssociationController extends Controller
+class AssociationUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class AssociationController extends Controller
      */
     public function index()
     {
-        $associations = Association::all() ; 
-        return view('associations.index' ,compact('associations')) ; 
+        //
     }
 
     /**
@@ -23,7 +21,6 @@ class AssociationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function create()
     {
         //
@@ -46,8 +43,9 @@ class AssociationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Association $association)
+    public function show($id)
     {
+        //
     }
 
     /**

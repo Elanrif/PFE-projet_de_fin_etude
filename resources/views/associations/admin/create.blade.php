@@ -1,5 +1,5 @@
-@extends('../source/layout')
-@section('content')
+@extends('../../admin/home')
+@section('admin')
  
 <div class="container-fluid">
     <form method="POST" class="my-5 py-5" action="{{ route('association.store') }}">

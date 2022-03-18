@@ -2,8 +2,9 @@
 
 @extends('../source/layout')
 @section('content')
+<!-- j'extends mon source layout--> 
 <div class="row container-fluid row-cols-1 row-cols-md-3 g-4 pb-5">
-  @foreach($association as $association)
+  
   <div class="col">
     <div class="card h-100">
       <img src="{{asset('images/'.$association->photo)}}" class="card-img-top" alt="...">
@@ -13,6 +14,6 @@
       </div>
     </div>
   </div>
-  @endforeach
+ 
 </div>
 @endsection
