@@ -44,6 +44,7 @@ class AdminAssociationController extends Controller
             'date'=>'required',
             'description'=>'required',
             'mini_description'=>'required',
+            
         ]);
 
         Association::create($request->all()) ; 
@@ -105,7 +106,7 @@ class AdminAssociationController extends Controller
     {
        $association->delete() ;
 
-       return redirect()->route('association.index')
-       ->with('succes','L\'association a été supprimé avec succès');
+       return redirect()->route('association.index')->with('success','L\'association a été supprimé avec succès.');
+;
     }
 }

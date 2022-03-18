@@ -29,9 +29,14 @@
                             </div>
 
                             <label for="description" class="col-md-4 fs-3 col-form-label text-md-end">{{ __('description') }}</label>
-                            <div class="col-md-6">
-                                <input id="description" type="text" class="form-control fs-4 @error('description') is-invalid @enderror" name="description" value="{{ old('nom') }}" required autocomplete="description" autofocus placeholder="description">
-
+                            <div class="col-md-6 mb-2">
+                               <!-- <input id="description" type="text" class="form-floating fs-4 @error('description') is-invalid @enderror" name="description" value="{{ old('nom') }}" required autocomplete="description" autofocus > -->
+                               
+                               <div class="form-floating">
+                                   <textarea class="form-control form-floating fs-4 @error('description') is-invalid @enderror" name="description" value="{{ old('nom') }}" required autocomplete="description" autofocus name="description"placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                   <label for="floatingTextarea2">ecrire....</label>
+                                </div>
+                               
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message}} </strong>
@@ -44,6 +49,17 @@
                                 <input id="mini_description" type="text" class="form-control fs-4 @error('mini_description') is-invalid @enderror" name="mini_description" value="{{ old('mini_description') }}" required autocomplete="mini_description" autofocus placeholder="petite description">
 
                                 @error('mini_description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message}} </strong>
+                                    </span>
+                                @enderror
+                            </div>
+
+                             <label for="photo" class="col-md-4 fs-3 col-form-label text-md-end">{{ __('photo') }}</label>
+                            <div class="col-md-6">
+                                <input id="photo" type="text" class="form-control fs-4 @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus placeholder=".jpeg ou .jpeg ">
+
+                                @error('photo')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message}} </strong>
                                     </span>
