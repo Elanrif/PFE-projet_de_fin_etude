@@ -5,6 +5,7 @@ use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\User;
 use App\Http\Controllers\UserController;
+use App\Models\Association;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $associations = Association::all() ; 
+    return view('welcome', compact('associations'));
 });
 
 Auth::routes();
@@ -31,3 +33,7 @@ Route::resource('associations' ,AssociationController::class) ;
 Route::resource('admin/association',AdminAssociationController::class) ; 
 Route::resource('evenements',EvenementController::class) ; 
 Route::resource('utilisateurs', UserController::class) ; 
+Route::get('/home',function() { 
+
+    return view('admin.home') ; 
+});

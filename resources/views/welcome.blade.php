@@ -50,7 +50,7 @@
     <h2 class="text-center px-5 mx-5" style="padding-top:70px;color:var(--blanc--); font-size:80px;font-family: 'Lobster', cursive;">Les associations Etudiants de la Facultés Abdelmalek Essaâdi Tetouan</h2>
   </div>
   <!-- fin texte --> 
-
+  
 </div>
 <!-- --> 
 <!-- card en grande image en haut -->
@@ -58,32 +58,32 @@
  
   <div class="card-body row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-       <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> C'est quoi une association ? </h5>
-    <p class="card-text fs-5"> 
-  Il s’agit d’une association <span class="text-primary"> loi 1901</span> . A l’instar des autres, elle ne cherche pas à réaliser des bénéfices. L’idée de <span class="text-primary"> créer un organisme associatif </span> vise à concrétiser un projet commun entre étudiants. Elle donne la possibilité à ces derniers de <span class="text-primary"> découvrir </span> de nouveaux aspects de <span class="text-primary"> la vie étudiante</span>.</p>
-    </div>
+      <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> C'est quoi une association ? </h5>
+      <p class="card-text fs-5"> 
+        Il s’agit d’une association <span class="text-primary"> loi 1901</span> . A l’instar des autres, elle ne cherche pas à réaliser des bénéfices. L’idée de <span class="text-primary"> créer un organisme associatif </span> vise à concrétiser un projet commun entre étudiants. Elle donne la possibilité à ces derniers de <span class="text-primary"> découvrir </span> de nouveaux aspects de <span class="text-primary"> la vie étudiante</span>.</p>
+      </div>
       <div class="col">
        <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> A quoi servent les Associations Etudiants  ? </h5>
     <p class="card-text fs-5"> 
       Dans un premier temps, elles servent à réunir les étudiants autour d'une cause qui leur tient à cœur. En effet, vous allez rencontrer de nouvelles personnes qui ont des intérêts similaires aux vôtres. Dans cette ambiance, vous serez capable de construire un projet et de vous fixer des objectifs réalisables.</p>
-      </div>
+    </div>
     <div class="col">
           <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> Pourquoi intégrer une association ? </h5>
     <p class="card-text fs-5"> 
       
       Faire partie d'une association étudiante vous donnera l'occasion de vivre une expérience enrichissante mais aussi d'ajouter une précieuse ligne à votre CV. On peut tout à fait considérer que certains postes associatifs sont aussi valorisants sur un CV qu’un stage.</p> 
+    </div>
   </div>
-</div>
 </div>
 
 
   <!-- --> 
-    <hr class="text-primary fw-bold " style="width:90%;">
+  <hr class="text-primary fw-bold " style="width:90%;">
   <!-- quelque example d'associations pour la page d'acceuil -->
   <h3 class="my-2 ps-4 text-center" style="color:var(--noir--); font-size:80px;font-family: 'Lobster', cursive;"> Les différentes types d'associations ? </h3>
   <div class="row container-fluid row-cols-1 row-cols-md-3 g-4 pb-5">
-  <div class="col">
-    <div class="card h-100">
+    <div class="col">
+      <div class="card h-100">
       <img src="{{asset('images/assos-etudiant-4__1_.webp')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
@@ -138,7 +138,8 @@
   </div>
 </div>
 
-  <!-- -->
+<!-- -->
+
 
 
 <!-- quelques associations -->
