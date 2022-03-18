@@ -8,8 +8,8 @@
     <div class="card h-100">
       <img src="{{asset('images/'.$association->photo)}}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Nom des associations : {{$association->nom}}</h5>
-        <p class="card-text">{{$association->date}}.</p>
+        <h5 class="card-title">association : <span class="text-primary">{{$association->nom}}</span></h5>
+        <p class="card-text"> Crée le : <span class="text-primary">{{$association->date}}</span> </p>
       </div>
     </div>
   </div>

@@ -15,8 +15,7 @@ class AssociationController extends Controller
     public function index()
     {
         $associations = Association::all() ; 
-
-        return view('associations.index', compact('associations'));
+        return view('associations.index' ,compact('associations')) ; 
     }
 
     /**
@@ -24,9 +23,10 @@ class AssociationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
-        return view('associations.create');
+        //
     }
 
     /**
@@ -37,17 +37,7 @@ class AssociationController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nom'=>'required',
-            'date'=>'required',
-            'description'=>'required',
-            'mini_description'=>'required',
-        ]);
-
-        Association::create($request->all()) ; 
-
-        return redirect()->route('associations.index')->with('success','L\'association a été créer avec succès.');
-
+        //
     }
 
     /**
@@ -56,9 +46,9 @@ class AssociationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Association $association)
+    public function show($id)
     {
-        return view('associations.show' , compact('association'));
+        //
     }
 
     /**
@@ -67,9 +57,9 @@ class AssociationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Association $association)
+    public function edit($id)
     {
-        return view('associations.edit', compact('association'));
+        //
     }
 
     /**
@@ -79,18 +69,9 @@ class AssociationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Association $association)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'nom'=>'required',
-            'date'=>'required',
-            'description'=>'required',
-            'mini_description'=>'required'
-        ]);
-
-        $association->update($request->all());
-
-        return redirect()->route('associations.index')->with('success' , 'L\'association a été modifier avec succès .') ; 
+        //
     }
 
     /**
@@ -99,11 +80,8 @@ class AssociationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Association $association)
+    public function destroy($id)
     {
-       $association->delete() ;
-
-       return redirect()->route('associtions.index')
-       ->with('succes','L\'association a été supprimé avec succès');
+        //
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminAssociationController;
 use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\User;
@@ -26,6 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('associations',AssociationController::class) ; 
+Route::resource('associations' ,AssociationController::class) ; 
+Route::resource('admin/association',AdminAssociationController::class) ; 
 Route::resource('evenements',EvenementController::class) ; 
 Route::resource('utilisateurs', UserController::class) ; 
