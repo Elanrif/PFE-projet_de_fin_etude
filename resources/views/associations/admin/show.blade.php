@@ -6,7 +6,7 @@
   
   <div class="col pt-3">
     <h3 style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Les Membres de l'associations </h3>
-    <table class="table">
+    <table class="table table-dark table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">id</th>

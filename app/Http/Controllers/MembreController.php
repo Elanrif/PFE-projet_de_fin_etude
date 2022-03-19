@@ -19,7 +19,8 @@ class MembreController extends Controller
         $users = User::latest()->paginate(7) ;
         $associations = Association::latest()->paginate(7) ; 
         $membres = Membre::latest()->paginate(7)  ; 
-        return view('membres.admin.index',compact(['membres','users','associations'])) ;
+        $count = Membre::count() ;
+        return view('membres.admin.index',compact(['membres','users','associations','count'])) ;
     }
 
     /**

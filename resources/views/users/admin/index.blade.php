@@ -7,16 +7,19 @@
    
   <div class="row g-5">
   <div class="col-md-12">
- <table class="table">
+ <table class="table table-dark table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Etudiant_id</th>
-      <th scope="col">association_id</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
       <th scope="col">email</th>
       <th scope="col">code apogée</th>
       <th scope="col">filière</th>
       <th scope="col">semestre</th>
+      <th scope="col">Téléphone</th>
+      <th scope="col">role</th>
+      <th scope="col"></th>
       
       
     </tr>
@@ -28,14 +31,15 @@
       <td class="pt-3"> {{$user->nom}} </td>
       <td class="pt-3"> {{$user->prenom}}</td>
       <td class="pt-3"> {{$user->email}}</td>
-      <td class="pt-3"> {{$user->num_tel}}</td>
       <td class="pt-3"> {{$user->code_apogée}}</td>
-      <td class="pt-3"> {{$user->filière}}</td>
+      <td class="pt-3"> {{$user->filiere}}</td>
       <td class="pt-3"> {{$user->semestre}}</td>
+      <td class="pt-3"> {{$user->num_tel}}</td>
+      <td class="pt-3"> {{$user->role}}</td>
       
       <td class="">
         <ul class="nav">
-      <span> <a class="btn btn-primary nav-link text-light me-3"  href="#">Modifier</a> </span> 
+      <span> <a class="btn btn-primary nav-link text-light pe-3"  href="#">Modifier</a> </span> 
         <form class="mb-3 ms-3" action="#" method="POST">
                     
                     @csrf
@@ -71,8 +75,8 @@
     @endif
 
    {{$users->links()}}
-  <a class="btn btn-success" href="#"> <i class="fa-solid fa-plus"></i> Ajouter </a>
-  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Les Etudiants</h4>
+  <a class="btn btn-success" href="{{route('register')}}"> <i class="fa-solid fa-plus"></i> Ajouter </a>
+  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Listes des  Etudiants inscrits  <i class="fa-solid fa-user-pen text-primary"></i> :  <span> {{$count}} Etudiants</span></h4> 
   </div>
  
 

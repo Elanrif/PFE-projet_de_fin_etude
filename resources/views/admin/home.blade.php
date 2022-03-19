@@ -32,7 +32,7 @@
         <a class="nav-link text-light" aria-current="page" href="/"><i class="fa-solid fa-house-chimney me-2"></i>Acceuil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" href="#"><i class="fa-solid fa-person me-2"></i>Utilisateurs</a>
+        <a class="nav-link text-light" href="{{route('utilisateur.index')}}"><i class="fa-solid fa-person me-2"></i>Utilisateurs</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-light" href="{{route('association.index')}}"><i class="fa-solid fa-layer-group me-2"></i>Associations</a>

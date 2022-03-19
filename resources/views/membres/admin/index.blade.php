@@ -7,7 +7,7 @@
    
   <div class="row g-5">
   <div class="col-md-12">
- <table class="table">
+ <table class="table table-dark table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -62,7 +62,7 @@
 
    {{$membres->links()}}
   <a class="btn btn-success" href="{{ route('membre.create') }}"> <i class="fa-solid fa-plus"></i> Ajouter </a>
-  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Etudiants && Associations</h4>
+  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Etudiants <i class="fa-solid fa-arrow-right-arrow-left mx-3 text-primary" ></i> Associations : <span class="text-primary" style="font-family: 'Lobster', cursive;"> {{$count}} Participations</span></h4>
   </div>
   <!--
     {{$associations->links()}}

@@ -7,6 +7,7 @@
  <div class="float-start me-3">
     {{$associations->links()}}
   <a class="btn btn-success" href="{{ route('association.create') }}"> <i class="fa-solid fa-plus"></i> Créer une association</a>
+  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Nombre des  Associations : <span class="text-primary" style="font-family: 'Lobster', cursive;"> + {{$count}} </span></h4>
   </div>
       @if ($message = Session::get('success'))
         <div class="alert alert-success">
