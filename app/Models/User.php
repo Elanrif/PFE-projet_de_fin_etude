@@ -51,6 +51,6 @@ class User extends Authenticatable
     public function associations() { 
         return $this->belongsToMany(Association::class , 'membres') ;
     }
-  
+   
     
 }

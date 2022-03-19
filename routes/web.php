@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminAssociationController;
 use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\AssociationUserController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\MembreController;
 use App\Http\Controllers\PhotoCommentController;
 use App\Http\Controllers\User;
 use App\Http\Controllers\UserController;
@@ -33,6 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('associations' ,AssociationController::class) ; 
 Route::resource('admin/association',AdminAssociationController::class) ; 
+Route::resource('admin/membre',MembreController::class);
 Route::resource('evenements',EvenementController::class) ; 
 Route::resource('utilisateurs', UserController::class) ; 
 Route::get('/Home',function() { 

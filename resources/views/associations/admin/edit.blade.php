@@ -70,9 +70,10 @@
 
                            <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn ms-2 fs-5 btn-primary">
-                                    {{ __('Créer') }}
+                                <button type="submit" class="btn ms-2 fs-5 btn-success">
+                                    {{ __('Modifier') }}
                                 </button>
+                              <button class="btn btn-danger ">  <a href="{{route('association.index')}}" class="nav-link fs-5 d-flex align-items-center text-light " style="height:30px;">{{_('Annuler')}}</a> </button>
                             </div>
                           </div>
                           

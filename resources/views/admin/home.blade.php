@@ -43,6 +43,9 @@
        <li class="nav-item">
         <a class="nav-link text-light" href="#"><i class="fa-solid fa-user-group me-2 px-0"></i>Membre du <span class="ms-4" style="padding-left:5px;">Bureau</span></a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link text-light" href="{{route('membre.index')}}"><i class="fa-solid fa-user-group me-2 px-0"></i>Membre des  <span class="ms-4" style="padding-left:5px;">associations</span></a>
+      </li>
    
     </ul>
     </div>
