@@ -45,9 +45,7 @@ class MembreController extends Controller
     {
           $request->validate([
             'user_id'=>'required',
-            'association_id'=>'required',
-            
-            
+            'association_id'=>'required',   
         ]);
 
         Membre::create($request->all()) ; 
@@ -75,8 +73,9 @@ class MembreController extends Controller
      */
     public function edit(Membre $membre)
     {
-        $users =User::class ;
-        $associations = Association::class ;
+         $associations = Association::all() ;
+        $users = User::all();
+        
        return view('membres.admin.edit',compact(['membre','users','associations']));
     }
 
@@ -97,7 +96,7 @@ class MembreController extends Controller
 
         $membre->update($request->all());
 
-        return redirect()->route('association.index')->with('success' , 'La modification  a été pris en compte avec succès .') ; 
+        return redirect()->route('membre.index')->with('success' , 'La modification  a été pris en compte avec succès .') ; 
     
     }
 

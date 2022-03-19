@@ -11,12 +11,12 @@
                                <label for="user_id" class="col-md-4 my-3 fs-3 col-form-label text-md-end">{{ __('utilisateur') }}</label>
                              <div class="col-md-6 my-3">
                                 <select id="user_id" type="user_id" class="form-select fs-4 @error('user_id') is-invalid @enderror" name="user_id" value="{{ old('user_id') }}" required autocomplete="user_id">
-                               <option selected><span class="text-muted"> veuillez sélectionner l'utilisateur ...... </span></option>
+                               <option selected><span class="text-muted"> veuillez sélectionner l'utilisateur ... </span></option>
                                @foreach($users as $user)
-                               <option value="{{$user->id}}">{{$user->id}} {{$user->nom}}</option>
+                               <option value="{{$user->id}}">{{$user->id}} - {{$user->nom}}</option>
                                @endforeach
                                </select>
-                                @error('semestre')
+                                @error('association_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -26,12 +26,12 @@
                               <label for="association_id" class="col-md-4  fs-3 col-form-label text-md-end">{{ __('association') }}</label>
                             <div class="col-md-6">
                                 <select id="association_id" type="association_id" class="form-select fs-4 @error('association_id') is-invalid @enderror" name="association_id" value="{{ old('association_id') }}" required autocomplete="association_id">
-                               <option selected><span class="text-muted"> sélectionner le nom de l'association ...... </span></option>
+                               <option selected><span class="text-muted"> sélectionner le nom de l'association ... </span></option>
                                @foreach($associations as $association)
-                               <option value="{{$association->id}}">{{$association->id}} {{$association->nom}}</option>
+                               <option value="{{$association->id}}">{{$association->id}} - {{$association->nom}}</option>
                                @endforeach
                                </select>
-                                @error('semestre')
+                                @error('association_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

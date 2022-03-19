@@ -22,7 +22,7 @@
                             <label for="date" class="col-md-4 fs-3 col-form-label text-md-end">{{ __('date') }}</label>
                             <div class="col-md-6">
                                 <input id="date" type="date" class="form-control fs-4 @error('date') is-invalid @enderror" name="date" value="{{ $association->date }}" required autocomplete="date" autofocus  
-                                min="2015-01-01" max="2022-03-28">
+                                min="2010-01-01" max="2022-03-01">
                                 @error('date')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message}} </strong>

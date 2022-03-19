@@ -32,11 +32,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('associations' ,AssociationController::class) ; 
 Route::resource('admin/association',AdminAssociationController::class) ; 
 Route::resource('admin/membre',MembreController::class);
-Route::resource('evenements',EvenementController::class) ; 
-Route::resource('utilisateurs', UserController::class) ; 
+Route::resource('admin/evenement',EvenementController::class) ; 
+Route::resource('admin/utilisateur', UserController::class)->except(['create','store']) ; 
+Route::resource('associations' ,AssociationController::class) ; 
 Route::get('/Home',function() { 
 
     return view('admin.home') ; 
