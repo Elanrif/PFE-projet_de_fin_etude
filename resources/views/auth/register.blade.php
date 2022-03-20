@@ -60,7 +60,7 @@
                             <label for="num_tel" class="col-md-4 fs-3 col-form-label text-md-end">{{ __('Num Tel') }}</label>
 
                             <div class="col-md-6">
-                                <input id="num_tel" type="text" class="form-control fs-4 @error('num_tel') is-invalid @enderror" name="num_tel" value="{{ old('num_tel') }}" required autocomplete="num_tel" autofocus placeholder="saisir votre numero">
+                                <input id="num_tel" type="number" class="form-control fs-4 @error('num_tel') is-invalid @enderror" name="num_tel" value="{{ old('num_tel') }}" required autocomplete="num_tel" autofocus placeholder="saisir votre numero">
 
                                 @error('num_tel')
                                     <span class="invalid-feedback" role="alert">
@@ -75,7 +75,7 @@
 
                             <div class="col-md-6">
                                 <select id="filiere" type="filiere" class="form-select fs-4 @error('filiere') is-invalid @enderror" name="filiere" value="{{ old('filiere') }}" required autocomplete="filiere">
-                               <option selected> <span class="text-muted">Sélectionner votre filière ......</span></option>
+                               <option selected></option>
                                <option value="SMAI">SMAI</option>
                                <option value="SVT">SVT</option>
                                <option value="SMPC">SMPC</option>   
@@ -99,7 +99,7 @@
 
                             <div class="col-md-6">
                                 <select id="semestre" type="semestre" class="form-select fs-4 @error('semestre') is-invalid @enderror" name="semestre" value="{{ old('semestre') }}" required autocomplete="semestre">
-                               <option selected><span class="text-muted"> sélectionner votre semestre ...... </span></option>
+                               <option selected></option>
                                <option value="S1">S1</option>
                                <option value="S2">S2</option>
                                <option value="S3">S3</option>

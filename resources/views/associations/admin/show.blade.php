@@ -18,7 +18,7 @@
   <tbody>
     @foreach($association->users as $user)
     <tr>
-      <th scope="row">{{$user->id}}</th>
+      <th scope="row">{{$user->id}}</th> <!-- $user->id peut être remplaçé par $loop->index -->
       <td>{{$user->nom}}</td>
       <td>{{$user->prenom}}</td>
       <td>{{$user->email}}</td>
