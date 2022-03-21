@@ -16,7 +16,6 @@ class AdminAssociationController extends Controller
     public function index()
     {
         $associations = Association::latest()->paginate(3) ;
-        
         $count = Association::count() ; 
         return view('associations.admin.index', compact(['associations','count']));
     }

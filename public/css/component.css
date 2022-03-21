@@ -17,14 +17,7 @@
   padding-top:50px;
 }
 
-/*page admin */
-/*
-.connexion{ 
-  background: linear-gradient(rgba(10, 10, 10, 0.9),rgba(15, 15, 15, 0.9)), url('../images/jeune_etudiants.webp') no-repeat center center / cover;
-  width:auto; 
-  height:auto;
-}
-*/
+
 #newsletter{ 
   padding-left:100px;
   display: flex;
@@ -51,6 +44,14 @@
   height:100vh;
 }
 
+.owen{ 
+  background-color: var(--bisque--);
+}
+.lineaire { 
+   background: linear-gradient(rgba(38, 35, 66, 0.5),#0e0324) , url(../images/fete.jpeg) center / cover no-repeat  ;
+  height:100vh;
+  border-radius:74% 26% 94% 6% / 4% 66% 34% 96% ;
+}
 .linear img { 
   position : relative ; 
   top:10px ; 
@@ -81,6 +82,11 @@
       margin-bottom: 5px;
       margin-top:5px;
     }
-
+   .lineaire{ 
+     border-radius: 87% 13% 44% 56% / 28% 79% 21% 72% ;
+     visibility:hidden ;
+     height:0px;
+     
+   }
 
 }

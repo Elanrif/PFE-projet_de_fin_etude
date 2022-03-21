@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $associations = Association::all() ; 
+  
     return view('welcome', compact('associations'));
 });
 

@@ -14,7 +14,8 @@ class AssociationController extends Controller
      */
     public function index()
     {
-        $associations = Association::all() ; 
+        /** si on veut afficher par exemple dans cette page une association mais aussi l'afficher dans une autre page alors je dois aussi aller dans l'autre page et définir la même variable */
+        $associations = Association::all() ;
         return view('associations.index' ,compact('associations')) ; 
     }
 

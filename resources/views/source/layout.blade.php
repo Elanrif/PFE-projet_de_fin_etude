@@ -26,12 +26,9 @@
           <a class="nav-link active" href="#">Presentation</a>
         </li>
 
-        <li class="nav-item px-3">
-          <a class="nav-link active" href="{{route('associations.index')}}">Associations</a>
-        </li>
         
         <li class="nav-item px-3">
-          <a class="nav-link active" href="/Home">admin</a>
+          <a class="nav-link active" href="/Home"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
         </li>
         
         

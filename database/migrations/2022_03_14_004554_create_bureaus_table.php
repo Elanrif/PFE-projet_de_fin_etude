@@ -15,9 +15,14 @@ return new class extends Migration
     {
         Schema::create('bureaus', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('email')->unique();
+            $table->unsignedBigInteger('Tel')->unique();
+            $table->char('sexe',1);
             $table->string('roles');
-            $table->foreignId('user_id')->unique()->constrained();
             $table->foreignId('association_id')->constrained();
+            $table->unique(['roles','association_id']);
             $table->timestamps();
         });
     }
