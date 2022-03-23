@@ -60,7 +60,8 @@ class AdminAssociationController extends Controller
      */
     public function show(Association $association)
     {
-        return view('associations.admin.show' , compact('association'));
+        $associations = Association::all() ;
+        return view('associations.admin.show' , compact(['association','associations']));
     }
 
     /**
@@ -71,7 +72,8 @@ class AdminAssociationController extends Controller
      */
     public function edit(Association $association)
     {
-        return view('associations.admin.edit', compact('association'));
+        $associations = Association::all() ;
+        return view('associations.admin.edit', compact(['association','associations']));
     }
 
     /**

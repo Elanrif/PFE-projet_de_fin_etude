@@ -1,44 +1,6 @@
 @extends('source.layout')
 @section('content')
  
-   
- <!--
-  <div class="index1 carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{asset('images/esma.jpg')}}" class="image bg-dark d-block w-100 ;height:50vh;" alt="...">
-      <div class="carousel-caption d-none d-md-block" style="padding-bottom:100px;">
-       
-       <div class="rounded rounded-2 card_1 card text-center " style="background-color:black;">
-    <div class="card-header">
-    <span style="color:brown;font-size:25px;"><i class="fas fa-people-carry text-light"></i> c'est quoi une Association Etudiants ? </span> 
-    <p>C’est une association qui est constituée d’étudiants. Le nombre peut varier selon les activités exercées par cette dernière. De plus, les étudiants proviennent de différents niveaux et de différentes filières. L’association peut exister à différentes échelles : école, université, ville, région, pays, continent et le monde. Il faut savoir qu’il existe plusieurs sortes d’associations pour les causes humanitaires, les enfants, l’éducation, le sport, la vie étudiante, le logement étudiant et bien d’autres.</p>
-  </div>
-
-  <div class="card-body">
-    <h5 class="card-title " style="color:brown;font-size:25px;"><i class="fas fa-people-arrows text-light me-2"></i>Pourquoi integrer une association ? </h5>
-    <p class="card-text">Faire partie d'une association étudiante vous donnera l'occasion de vivre une expérience enrichissante mais aussi d'ajouter une précieuse ligne à votre CV. On peut tout à fait considérer que certains postes associatifs sont aussi valorisants sur un CV qu’un stage.</p>
-    <a href="#" class="btn btn-primary">En savoir Plus</a>
-  </div>
-  <div class="card-footer text-muted">
-    .....
-  </div>
-</div>
-      </div>
-    </div>
-    
-    
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
--->
-
 <!-- image avec linear gradient -->
 
 
@@ -49,7 +11,7 @@
 
   <!-- pour le texte sur la photo --> 
   <div class="d-flex justify-content-center">
-    <h2 class="text-center px-5 mx-5" style="padding-top:70px;color:var(--blanc--); font-size:80px;font-family: 'Lobster', cursive;">Les associations Etudiants de la Facultés Abdelmalek Essaâdi Tetouan</h2>
+    <h2 class="text-center px-5 mx-5" style="padding-top:0px;color:var(--blanc--); font-size:80px;font-family: 'Lobster', cursive;">Les associations Etudiants de la Facultés Abdelmalek Essaâdi Tetouan</h2>
   </div>
   <!-- fin texte --> 
   
@@ -58,7 +20,7 @@
 <!-- card en grande image en haut -->
 <div class="card mb-3 container-fluid">
  
-  <div class="card-body row  g-4">
+  <div class="card-body row row-cols-1 row-cols-md-3  g-4">
     <div class="col">
       <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> C'est quoi une association ? </h5>
       <p class="card-text fs-5"> 
@@ -88,7 +50,7 @@
  
   <div class="owen pb-5">
     <!-- includer l'associations --> 
-  @include('associations.index')
+  
   <!-- -->
 </div>
 

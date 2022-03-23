@@ -1,4 +1,4 @@
-@extends('../../admin/home')
+@extends('../../admin/page')
 @section('admin')
  
 <div class="container-fluid">

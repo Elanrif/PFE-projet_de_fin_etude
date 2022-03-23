@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Association;
-use App\Models\User;
+use App\Models\Bureau;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 
-class UserController extends Controller
+class BureauController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        $users = User::latest()->paginate(7) ;
-        $count = User::count() ;
-        return view('users.admin.index',compact(['users','count'])) ; 
-    
-
+        $bureaus = Bureau::all();
+        $count = Bureau::count() ;
+       
+        return view('bureaus.admin.index',compact(['bureaus','count'])) ;
     }
 
     /**
@@ -48,10 +45,10 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Bureau  $bureau
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Bureau $bureau)
     {
         //
     }
@@ -59,10 +56,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Bureau  $bureau
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Bureau $bureau)
     {
         //
     }
@@ -71,10 +68,10 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Bureau  $bureau
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Bureau $bureau)
     {
         //
     }
@@ -82,10 +79,10 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Bureau  $bureau
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Bureau $bureau)
     {
         //
     }

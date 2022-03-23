@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Association;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
+use App\Models\Association ; 
 
-class UserController extends Controller
+class AdminPageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        $users = User::latest()->paginate(7) ;
-        $count = User::count() ;
-        return view('users.admin.index',compact(['users','count'])) ; 
-    
-
+        
+        return view('admin.page');
     }
 
     /**

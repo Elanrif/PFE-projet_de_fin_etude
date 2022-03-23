@@ -1,13 +1,13 @@
 
-@extends('../../admin/home')
+@extends('../../admin/page')
 @section('admin')
 
 
 <div class="container-fluid">
    
   <div class="row g-5">
-  <div class="col-md-12">
- <table class="table table-dark table-striped table-hover">
+  <div class="col-6 col-md-12">
+ <table class="table fs-5 fw-bold table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">id</th>

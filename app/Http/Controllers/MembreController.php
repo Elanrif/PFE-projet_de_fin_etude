@@ -6,6 +6,7 @@ use App\Models\Association;
 use App\Models\Membre;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Gate ;
 
 class MembreController extends Controller
 {
@@ -16,11 +17,13 @@ class MembreController extends Controller
      */
     public function index()
     {
+
         $users = User::latest()->paginate(7) ;
         $associations = Association::latest()->paginate(7) ; 
         $membres = Membre::latest()->paginate(7)  ; 
         $count = Membre::count() ;
         return view('membres.admin.index',compact(['membres','users','associations','count'])) ;
+       
     }
 
     /**

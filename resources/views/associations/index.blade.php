@@ -12,7 +12,9 @@
       <div class="h5 fw-bold ps-3" style="color:var(--bleu--);">  {{$association->users->count()}} Bénévoles <i class="fa-solid fa-user-group"></i></div>
      <div class="d-flex">
       <button class="btn btn-outline-primary border w-25"><i class="fa-solid fa-eye fs-3" style="color:var(--bisque--);"></i></button>
-      <button class="btn btn-outline-success border border border-primary fs-4  w-50" style="margin-left:220px;"><i class="fa-solid fa-star pe-1"></i>suivre</button>
+      
+      <a  href="{{route('login')}}" class="btn btn-outline-success border border border-primary fs-4  w-50" style="margin-left:220px;"><i class="fa-solid fa-star pe-1"></i>suivre</a>
+      
       </div>
     </div>
   </div>

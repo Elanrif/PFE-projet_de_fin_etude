@@ -19,7 +19,7 @@
 
 
 #newsletter{ 
-  padding-left:100px;
+  padding-left:0px;
   display: flex;
   justify-content: center;
   background-color: var(--bisque--);
@@ -41,7 +41,7 @@
 /* pour l'image en linear-gradient*/
 .linear{ 
   background: linear-gradient(rgb(0,0,0,0.5),#0676d1) , url(../images/esma.jpg) center / cover no-repeat  ;
-  height:100vh;
+  height:60vh;
 }
 
 .owen{ 

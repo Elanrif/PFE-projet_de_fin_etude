@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin_page;
 use App\Http\Controllers\AdminAssociationController;
+use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\AssociationUserController;
+use App\Http\Controllers\BureauController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\MembreController;
 use App\Http\Controllers\PhotoCommentController;
@@ -36,11 +39,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('admin/association',AdminAssociationController::class) ; 
 Route::resource('admin/membre',MembreController::class);
 Route::resource('admin/evenement',EvenementController::class) ; 
-Route::resource('admin/utilisateur', UserController::class)->except(['create','store']) ; 
+Route::resource('admin/utilisateur', UserController::class); 
+Route::resource('admin/bureau',BureauController::class) ; 
 Route::resource('associations' ,AssociationController::class) ; 
-Route::get('/Home',function() { 
 
-    return view('admin.home') ; 
-});
-Route::resource('associations.users', AssociationUserController::class) ;  
+Route::resource('admin/page',AdminPageController::class) ; 
+ 
 

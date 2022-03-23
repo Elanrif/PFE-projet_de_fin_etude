@@ -1,5 +1,5 @@
 
-@extends('../../admin/home')
+@extends('../../admin/page')
 @section('admin')
 
 

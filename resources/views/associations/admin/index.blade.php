@@ -1,6 +1,6 @@
 
 
-@extends('../../admin/home')
+@extends('../../admin/page')
 @section('admin')
 
 <!-- dans chaque page admin je vais exteindre la page home de l'admin -->
@@ -31,13 +31,13 @@
         
       </div>
         <form class="mb-3 ms-3" action="{{ route('association.destroy',$association->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('association.show',$association->id) }}"><i class="fa-solid fa-eye fs-3"></i></a>
-                    <a class="btn btn-primary" href="{{ route('association.edit',$association->id) }}">Editer</a>
+                    <a class="btn btn-info h-100" href="{{ route('association.show',$association->id) }}"><i class="fa-solid fa-eye fs-5"></i></a>
+                    <a class="btn btn-primary" href="{{ route('association.edit',$association->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
 
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
          </form>
     </div>
   </div>

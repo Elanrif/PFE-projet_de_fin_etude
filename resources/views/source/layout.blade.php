@@ -20,29 +20,26 @@
     <div class="collapse navbar-collapse bg-light Z-index-3 ps-3" id="navbarSupportedContent">
       <ul class="index navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item px-3">
-          <a class="nav-link active" aria-current="page" href="/">Acceuil</a>
+          <a class="nav-link btn-outline-primary {{request()->is('/') ? 'active':''}} " aria-current="page" href="/">Acceuil</a>
         </li>
+        <!-- permet juste de cacher le boutton si l'utilisateur n'est pas admin-->
+          @if(auth()->check() AND auth()->user()->role == 'admin')
         <li class="nav-item px-3">
-          <a class="nav-link active" href="#">Presentation</a>
+          <a class="nav-link btn-outline-primary " href="{{route('page.index')}}"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
         </li>
-
-        
+        @endif
         <li class="nav-item px-3">
-          <a class="nav-link active" href="/Home"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
+          <a class="nav-link btn-outline-primary {{request()->is('#1') ? 'active':''}}" href="#1">Presentation</a>
         </li>
-        
-        
 
         <li class="nav-item dropdown px-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Actualité
+          <a class="nav-link btn-outline-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Associations
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">lien1</a></li>
-            <li><a class="dropdown-item" href="#">lien2</a></li>
-            <li><a class="dropdown-item" href="#">lien3</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">autre information</a></li>
+            @foreach($associations as $association)
+            <li><a class="dropdown-item" href="#">{{$association->nom}}</a></li>
+            @endforeach
           </ul>
         </li>
        
@@ -74,15 +71,16 @@
   </div>
 </nav>
      <!-- -->
+      
+         @yield('content')
 
-                @yield('content')
 
    
    <!--  newsletter-->
 
-     <div class="container-fluid px-3 d-flex" id="newsletter">
+     <div class="container-fluid px-3 " id="newsletter">
        <div class="row gap-3">
-         <div class="col-md-3 my-3 mx-5">  
+         <div class="col-md-3 my-3">  
              <h4 class="fw-bold">Rejoigner la Comunauté</h2> <hr class="w-25 " style="height:5px; color:var(--bleu--)">
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, vitae eum. Voluptatum cupiditate mollitia corrupti quasi numquam? Ullam quibusdam temporibus dolorum iste, nam optio ipsum inventore dolores at cumque quidem! <br/>
              <div class="mt-3">
@@ -91,7 +89,7 @@
            </strong>
            </div>
             </div>
-            <div class="col-md-3 my-3 mx-5">
+            <div class="col-md-3 my-3">
               <h4 class="fw-bold"><i class="fas fa-envelope  me-2"></i>Abonnez-vous au Newsletter</h2><hr class="w-50 " style="height:5px; color:var(--bleu--);">
              
               <form class="forms">
@@ -107,7 +105,7 @@
                 
 
             </div>
-            <div class="col-md-3 my-3 mx-5">
+            <div class="col-md-3 my-3">
            <h4 class="fw-bold">Nous suivre</h2> <hr class="w-50" style="height:5px;color:var(--bleu--);">
            <span class="fs-5">
            <i class="fab fa-facebook-square ms-3 me-2"></i><a href="" style="text-decoration:none; color:var(--noir--)">facebook.com </a> <br>
