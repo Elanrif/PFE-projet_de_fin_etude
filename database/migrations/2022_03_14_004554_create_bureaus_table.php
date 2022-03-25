@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('prenom');
             $table->string('email')->unique();
             $table->unsignedBigInteger('Tel')->unique();
-            $table->char('sexe',1);
-            $table->string('roles');
+            $table->date('date_mandat');
+            $table->string('Poste');
             $table->foreignId('association_id')->constrained();
-            $table->unique(['roles','association_id']);
+            $table->unique(['Poste','association_id']);
             $table->timestamps();
         });
     }

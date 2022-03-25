@@ -35,7 +35,7 @@
       <td class="pt-3"> {{$bureau->email}}</td>
       <td class="pt-3"> {{$bureau->Tel}}</td>
       <td class="pt-3"> {{$bureau->sexe}}</td>
-      <td class="pt-3"> {{$bureau->roles}}</td>
+      <td class="pt-3"> {{$bureau->Poste}}</td>
       <td class="pt-3"> {{$bureau->association_id}} 
         
       </td>
