@@ -16,13 +16,18 @@
   <!-- fin texte --> 
   
 </div>
-<!-- --> 
+<!--
+ -->
+
+
+
+
 <!-- card en grande image en haut -->
 <div class="card mb-3 container-fluid">
  
   <div class="card-body row row-cols-1 row-cols-md-3  g-4">
     <div class="col">
-      <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> C'est quoi une association ? </h5>
+      <h5 class="card-title fs-3 fw-bold" style="color:var(--noir--);"> C'est quoi une association ? </h5> 
       <p class="card-text fs-5"> 
         Il s’agit d’une association <span class="text-primary"> loi 1901</span> . A l’instar des autres, elle ne cherche pas à réaliser des bénéfices. L’idée de <span class="text-primary"> créer un organisme associatif </span> vise à concrétiser un projet commun entre étudiants. Elle donne la possibilité à ces derniers de <span class="text-primary"> découvrir </span> de nouveaux aspects de <span class="text-primary"> la vie étudiante</span>.</p>
       </div>

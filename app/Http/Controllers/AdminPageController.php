@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Association ; 
+use App\Models\User;
 
 class AdminPageController extends Controller
 {
@@ -14,8 +14,9 @@ class AdminPageController extends Controller
      */
     public function index()
     {
-        
-        return view('admin.page');
+        $users = User::latest()->paginate(8) ; 
+        $count = User::count() ; 
+        return view('admin.page',compact(['users','count']));
     }
 
     /**

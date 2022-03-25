@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -19,83 +20,78 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-
 <!-- La page de l'administrateur --> 
+ <div class="container-fluid">
+   <div class="row gy-5">      
+     <div class="col-12 col-xxl-2 bg-dark" style="position:fixed;"> <!-- a partir de md vers > je veux 2colonnes et le reste 12 ç-â-d toute le colonne -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="admin-s container-fluid flex-column"> <!-- aussi j'ai ajouté a tout les parent flex-column pour la verticale -->
     
-<!-- si je veux passer une variable au parents je dois la passer aux enfants qui n'ont pas cette variable comme ça les enfants vont prendre en compte la varialbe -->
-<!-- exemple ici , je veux passer "$association->nom" alors tout ceux qui vont extends leur parent et qui n'ont pas cette variable je dois la définir -->
-
-<!-- ici on a remarqué que sur les utilisateur et les membres de bureau ça ne marche pas car tout simplement ils n'ont pas cette variable dans leur controller -->
-
-<!-- Maintenant les membres de bureau marche car tout simplement ils ont conscience de cette variable $associations . donc puisque leur parent a cette variable c'est comme si j'utilise $associations du controller enfant dans la page parent puisque la page parent va contenir son fils -->
-
-<div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-2 ">
-    <div class="admin col-12 col-md-2 bg-black pt-3 text-white">
- 
-   
-
-    <ul class="nav flex-column fs-6">
-      <li class="nav-item" style="width:150px;">
-        <a class="nav-link text-light btn-outline-primary {{request()->is('/') ? 'active':''}}" aria-current="page" href="/"><i class="fa-solid fa-house-chimney me-2"></i>Acceuil</a>
-      </li>
-      <li class="nav-item my-3" style="width:150px;">
-        <a class="nav-link text-light btn-outline-primary {{request()->is('admin/utilisateur') ? 'active':''}}" href="{{route('utilisateur.index')}}"><i class="fa-solid fa-person me-2"></i>Utilisateurs</a>
-      </li>
-    
-    </ul>
-    <!-- ('admin/association*') me permet a partir de cette chaine ; sinon si seulement ('admin/association/*') il ne va prendre en compte ('admin/association') ce qui est un problème -->
-    <div class="btn-group dropend my-3">
-  <button class="btn border border-dark text-white my-3 dropdown-toggle btn-outline-primary {{request()->is('admin/association*')  ? 'active': ''}}" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fa-solid fa-layer-group me-2"></i>Associations
-  </button>
-  <ul class="dropdown-menu fs-5 fs-5" aria-labelledby="dropdownMenuButton1">
-   
-    <li><a class="dropdown-item" href="{{url('/admin/association/1')}}">BDE</a></li> 
-    <li><a class="dropdown-item" href="{{url('/admin/association/2')}}">Culturelle</a></li> 
-    <li><a class="dropdown-item" href="{{url('/admin/association/3')}}">Sportive</a></li> 
-  
-   
-    <li><a class="dropdown-item" href="{{route('association.index')}}">Tous les associations</a></li>
-  </ul>
+    <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse flex-column bg-dark px-4 pb-4 z-index-5 navbar-collapse" id="navbarSupportedContent1"> <!-- j'ai mis un différente nom de id pour difféncier avec les id des autres navbar -->
+      <!-- padding p pour le padding du navbar z-index-4 pour que quand je dimunue la largeur par défaut il se cache et on ne voit rien -->
+      <ul class="navbar-nav flex-column me-auto fs-5 mb-lg-0 ">
+        <li class="nav-item my-3">
+          <a class="nav-link  btn-outline-primary text-light rounded-3 {{request()->is('/') ? 'active':''}}" aria-current="page" href="/"><i class="fa-solid fa-right-from-bracket me-2"></i>Acceuil</a>
+        </li>
+        <li class="nav-item my-3">
+          <a class="nav-link text-light btn-outline-primary rounded-3 {{ request()->is('admin/utilisateur')? 'active':'' }} " href="{{route('utilisateur.index')}}"><i class="fa-solid fa-users me-2"></i>Utilisateurs</a>
+        </li>
+        <li class="nav-item dropdown my-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Membre du Bureau
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">BDE</a></li>
+            <li><a class="dropdown-item" href="#">SPORTIF</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{route('bureau.index')}}">Tous les Membres du Bureau</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown my-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Les Associations
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown my-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Les Evênements
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item my-3">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex row g-2"><!--j'ai ajouté row et les col pour si je diminue il se met chacun en ligne-->
+        <input class="form-control col-12 me-2 my-3" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success col-12" type="submit">Search</button>
+      </form>
     </div>
-
-     <div class="btn-group dropend my-3 ">
-  <button class="btn btn-black border border-dark text-white dropdown-toggle btn-outline-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-   <i class="fa-solid fa-calendar-week me-2"></i>Evenements
-  </button>
-  <ul class="dropdown-menu fs-5" aria-labelledby="dropdownMenuButton1">
-   <li><a class="dropdown-item" href="#">Thêatre</a></li> 
-    <li><a class="dropdown-item" href="#">Culturelle</a></li> 
-    <li><a class="dropdown-item" href="#">Sportive</a></li> 
-   
-    <li><a class="dropdown-item" href="{{route('association.index')}}">Tous les Evenements</a></li>
-  </ul>
-    </div>
-
-     <div class="btn-group dropend my-3">
-  <button class="btn border border-dark text-white dropdown-toggle btn-outline-primary {{request()->is('admin/bureau*') ? 'active': ''}}" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-   <i class="fa-solid fa-user-group me-2 px-0"></i>Membres du Bureau
-  </button>
-  <ul class="dropdown-menu fs-5" aria-labelledby="dropdownMenuButton1">
-   <li><a class="dropdown-item" href="#">BDE</a></li> 
-    <li><a class="dropdown-item" href="#">Culturelle</a></li> 
-    <li><a class="dropdown-item" href="#">Sportive</a></li> 
-     
-    <li><a class="dropdown-item" href="{{route('bureau.index')}}">Les membres de tout les bureau </a></li>
-  </ul>
-    </div>
-
-    </div>
-
-    <div class="admin_2 col-6 col-md-10 pt-2" >
-        
-        @yield('admin')
-
-    </div>
-</div>
-</div>
-
+  </div>
+</nav></div> <!-- fin de 1er col --> 
+     <div class="voix col pt-5"> <!--VOIR 'voix'CSS j'ai été obligé d'ajouter margin-left pour séparer cette bloc de celle de position:fixed -->
+      <div class="voi-x">
+          @yield('admin')
+      </div>
+     </div>
+   </div>
+ </div>
+<br><br><br>
+ <!-- exemple -->
 
     <script src="{{ asset('js/app.js') }}" ></script>
 </body>

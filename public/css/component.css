@@ -11,6 +11,15 @@
  /* font-family: 'Lobster', cursive; */
 }
 
+
+
+.btn1{ 
+  border : solid 1px blue ; 
+  background-color: blue;
+  color:white ; 
+  float:right;
+  margin-right:100px;
+}
 .liens{
   background-color: var(--noir--);
   color:var(--blanc--);
@@ -19,9 +28,6 @@
 
 
 #newsletter{ 
-  padding-left:0px;
-  display: flex;
-  justify-content: center;
   background-color: var(--bisque--);
   color:var(--noir--);
 }
@@ -59,6 +65,7 @@
   left:20px;
    height:200px;
    opacity:0.2; 
+   border-radius: 50%;
    
 }
 
@@ -67,9 +74,26 @@
    height:100vh;
 }
 
+.admin-s{
+  height:100vh;
+
+}
 /* */
+.voix{
+  margin-left:300px;
+  margin-top:50px;
+}
+
+
 @media screen and (max-width:970px) {
 
+  .voix{ 
+    margin-left:0px;
+   
+  }
+  .voi-x{
+    margin-top:100px;
+  }
     #newsletter{ 
         padding-top:0px;
         margin-left:0px;
@@ -77,7 +101,10 @@
     .forms{ 
       width:70%;
     }
+   .admin-s{
+     height:50px;
    
+   }
     .togle > * {
       margin-bottom: 5px;
       margin-top:5px;

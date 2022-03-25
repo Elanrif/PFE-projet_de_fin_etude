@@ -13,27 +13,29 @@
    <!--header-->
   <nav class="index2 navbar navbar-expand-lg navbar-light bg-light" style="height:100px;">
   <div class="container-fluid fs-4">
-    <a class="navbar-brand ps-5" href="/">Logo Etudiants</a>
+    <a class="navbar-brand ps-5" href="/">
+    <img src="{{asset('images/Logo_0008_Universite-AS.png') }}" class="img-fluid" alt="don't exist" style="height:80px; width:100px; border-radius:70px;">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse bg-light Z-index-3 ps-3" id="navbarSupportedContent">
       <ul class="index navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item px-3">
-          <a class="nav-link btn-outline-primary {{request()->is('/') ? 'active':''}} " aria-current="page" href="/">Acceuil</a>
+          <a class="nav-link btn-outline-primary rounded-2 {{request()->is('/') ? 'active':''}} " aria-current="page" href="/">Acceuil</a>
         </li>
         <!-- permet juste de cacher le boutton si l'utilisateur n'est pas admin-->
           @if(auth()->check() AND auth()->user()->role == 'admin')
         <li class="nav-item px-3">
-          <a class="nav-link btn-outline-primary " href="{{route('page.index')}}"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
+          <a class="nav-link btn-outline-primary rounded-2 " href="{{route('utilisateur.index')}}"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
         </li>
         @endif
         <li class="nav-item px-3">
-          <a class="nav-link btn-outline-primary {{request()->is('#1') ? 'active':''}}" href="#1">Presentation</a>
+          <a class="nav-link btn-outline-primary rounded-2 {{request()->is('#1') ? 'active':''}}" href="#1">Presentation</a>
         </li>
 
         <li class="nav-item dropdown px-3">
-          <a class="nav-link btn-outline-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link btn-outline-primary rounded-2 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Associations
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -60,7 +62,7 @@
         @auth
          <ul class="togle navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-         <button class="btn btn-outline-danger me-3"> <a class="nav-link active" aria-current="page" href="{{route('login')}}"><i class="fas fa-user me-2"></i>Se deconnecter</a></button>
+         <a class="nav-link active fs-4" aria-current="page" href="{{route('login')}}"><button class="btn btn-outline-primary me-3"> <i class="fa-solid fa-user-shield"></i></a></button>
         </li>
      
         </ul>
@@ -70,7 +72,7 @@
     </div>
   </div>
 </nav>
-     <!-- -->
+     <!-- ajouter quelque chose -->
       
          @yield('content')
 
@@ -78,9 +80,9 @@
    
    <!--  newsletter-->
 
-     <div class="container-fluid px-3 " id="newsletter">
-       <div class="row gap-3">
-         <div class="col-md-3 my-3">  
+     <div class="container-fluid" id="newsletter">
+       <div class="row gap-2">
+         <div class="col-md-4 my-3">  
              <h4 class="fw-bold">Rejoigner la Comunauté</h2> <hr class="w-25 " style="height:5px; color:var(--bleu--)">
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, vitae eum. Voluptatum cupiditate mollitia corrupti quasi numquam? Ullam quibusdam temporibus dolorum iste, nam optio ipsum inventore dolores at cumque quidem! <br/>
              <div class="mt-3">
@@ -89,7 +91,7 @@
            </strong>
            </div>
             </div>
-            <div class="col-md-3 my-3">
+            <div class="col-md-4 my-3">
               <h4 class="fw-bold"><i class="fas fa-envelope  me-2"></i>Abonnez-vous au Newsletter</h2><hr class="w-50 " style="height:5px; color:var(--bleu--);">
              
               <form class="forms">
@@ -114,13 +116,13 @@
             <i class="fab fa-linkedin-in ms-3 me-2"></i><a href="" style="text-decoration:none;color:var(--noir--)">Google.com </a> <br>
           </span>
           </div>
-       
+        
        </div>
      </div>    
      
      <!--  -->
            
-     <!--Liens-->
+     <!--Liens du footer-->
 
      <div class="liens container-fluid px-3">
        <div class="row">

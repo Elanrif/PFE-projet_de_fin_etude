@@ -34,8 +34,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
-                     <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-5" href="/">{{ __('Acceuil') }}</a>
+                     <li class="nav-item bg-dark rounded-3 fs-4">
+                                   
+                         <a class="nav-link fw-bold text-light btn-outline-secondary rounded-3 {{request()->is('/') ? 'active':''}}" aria-current="page" href="/"><i class="fa-solid fa-right-from-bracket me-2"></i>Acceuil</a>
                       </li>
                     </ul>
 
@@ -55,13 +56,13 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->nom  }}
+                            <li class="nav-item dropdown me-3 fs-4">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-primary" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->nom  }} {{ Auth::user()->prenom }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div class="dropdown-menu dropdown-menu-end bg-danger " aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item fw-bold text-white " href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Se déconnecter') }}

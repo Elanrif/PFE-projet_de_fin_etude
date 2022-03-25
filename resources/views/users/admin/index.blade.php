@@ -6,7 +6,7 @@
 <div class="container-fluid">
    
   <div class="row g-5">
-  <div class="col-6 col-md-12">
+  <div class="col">
  <table class="table fs-5 fw-bold table-striped table-hover">
   <thead>
     <tr>
@@ -37,17 +37,14 @@
       <td class="pt-3"> {{$user->num_tel}}</td>
       <td class="pt-3"> {{$user->role}}</td>
       
-      <td class="">
+      <td>
         <ul class="nav">
-      <span> <a class="btn btn-primary nav-link text-light pe-3"  href="#">Modifier</a> </span> 
-        <form class="mb-3 ms-3" action="#" method="POST">
-                    
+        <form class="d-flex mb-3 ms-3" action="#" method="POST">         
                     @csrf
                     @method('DELETE')
-      
-                    <button type="submit" class="btn btn-danger">Supprimer</button>
+           <a class="btn mx-3 btn-primary nav-link text-light pe-3"  href="#">Modifier</a> 
+          <button type="submit" class="btn btn-danger">Supprimer</button>
          </form>
-       
         </ul>
       </td>
       
