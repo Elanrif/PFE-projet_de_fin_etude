@@ -17,7 +17,10 @@
  
     <link rel="stylesheet" href="{{asset('css/component.css')}}">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 <body>
 <!-- La page de l'administrateur --> 
@@ -40,29 +43,31 @@
           <a class="nav-link text-light btn-outline-primary rounded-3 {{ request()->is('admin/utilisateur')? 'active':'' }} " href="{{route('utilisateur.index')}}"><i class="fa-solid fa-users me-2"></i>Utilisateurs</a>
         </li>
         <li class="nav-item dropdown my-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link text-light dropdown-toggle btn-outline-primary rounded-3 {{request()->is('admin/bureau*')  ? 'active': ''}}" type="but" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Membre du Bureau
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">BDE</a></li>
-            <li><a class="dropdown-item" href="#">SPORTIF</a></li>
+            <li><a class="dropdown-item" href="#">Bureau Des Etudiants (BDE)</a></li>
+            <li><a class="dropdown-item" href="#">CULTURELLE</a></li>
+            <li><a class="dropdown-item" href="#">SPORTIVE</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{route('bureau.index')}}">Tous les Membres du Bureau</a></li>
+            <li><a class="dropdown-item" href="{{route('bureau.index')}}">Tous les Membres des Bureau</a></li>
           </ul>
         </li>
          <li class="nav-item dropdown my-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link text-light dropdown-toggle btn-outline-primary rounded-3 {{request()->is('admin/association*')  ? 'active': ''}}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-layer-group me-2"></i>
             Les Associations
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Bureau Des Etudiants</a></li>
+            <li><a class="dropdown-item" href="#">CULTURELLE</a></li>
+            <li><a class="dropdown-item" href="#">SPORTIVE</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="{{route('association.index')}}">Toutes Les Associations</a></li>
           </ul>
         </li>
          <li class="nav-item dropdown my-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-calendar-check"></i>
            Les Evênements
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -92,7 +97,14 @@
  </div>
 <br><br><br>
  <!-- exemple -->
-
-    <script src="{{ asset('js/app.js') }}" ></script>
+ <script src="{{ asset('js/app.js') }}" ></script>
+ <script>
+$(document).ready(function(){
+$('#myBtn').click(function(){
+  $('.toast').toast({delay: 200000});
+  $('.toast').toast('show');
+});
+});
+</script>
 </body>
 </html>

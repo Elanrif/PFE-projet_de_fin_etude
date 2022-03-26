@@ -7,7 +7,7 @@
    
   <div class="row g-5">
   <div class="col-md-12">
- <table class="table table-dark table-striped table-hover">
+ <table class="table table-black table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -15,8 +15,8 @@
       <th scope="col">Prenom</th>
       <th scope="col">email</th>
       <th scope="col">Tel</th>
-      <th scope="col">sexe</th>
-      <th scope="col">roles</th>
+      <th scope="col">Mandat</th>
+      <th scope="col">poste</th>
       <th scope="col">association</th>
       
       <th scope="col"></th>
@@ -28,16 +28,15 @@
 
    </div>
     @foreach($bureaus as $bureau)
-    <tr>
+    <tr class="fw-bold">
       <th scope="row" class="pt-3">{{$bureau->id}}</th>
       <td class="pt-3"> {{$bureau->nom}} </td>
       <td class="pt-3"> {{$bureau->prenom}}</td>
       <td class="pt-3"> {{$bureau->email}}</td>
       <td class="pt-3"> {{$bureau->Tel}}</td>
-      <td class="pt-3"> {{$bureau->sexe}}</td>
+      <td class="pt-3"> {{$bureau->date_mandat}}</td>
       <td class="pt-3"> {{$bureau->Poste}}</td>
-      <td class="pt-3"> {{$bureau->association_id}} 
-        
+      <td class="pt-3"> {{$bureau->association->nom}} <!-- parfois directement a travers la relation tu accède -->
       </td>
 
       
@@ -69,7 +68,7 @@
 
   
   <a class="btn btn-success" href="#"> <i class="fa-solid fa-plus"></i> Ajouter </a>
-  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Liste des membres du Bureau  <i class="fa-solid fa-user-pen text-primary"></i> :  <span> {{$count}} </span></h4> 
+  <h4 class="pt-3" style="color:var(--noir--); font-size:35px;font-family: 'Lobster', cursive;">Liste de tous les  membres des Bureau  <i class="fa-solid fa-user-pen text-primary"></i> :  <span> {{$count}} </span></h4> 
   </div>
  
 

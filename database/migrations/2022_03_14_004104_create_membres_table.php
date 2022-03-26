@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('membres', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('association_id')->constrained();
+            $table->foreignId('association_id')->constrained()->onDelete('cascade');
             $table->unique(['user_id','association_id']);
             $table->timestamps();
         });

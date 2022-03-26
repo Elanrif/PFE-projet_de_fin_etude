@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('nom')->unique();
             $table->date('date');
             $table->longText('description');
-            $table->string('mini_description');
             $table->string('photo')->default('.jpg');
             $table->timestamps();
         });

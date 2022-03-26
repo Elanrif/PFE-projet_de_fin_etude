@@ -15,7 +15,7 @@ class AdminAssociationController extends Controller
       
     public function index()
     {
-        $associations = Association::latest()->paginate(3) ;
+        $associations = Association::latest()->paginate(15) ;
         $count = Association::count() ; 
         return view('associations.admin.index', compact(['associations','count']));
     }
@@ -42,13 +42,12 @@ class AdminAssociationController extends Controller
             'nom'=>'required',
             'date'=>'required',
             'description'=>'required',
-            'mini_description'=>'required',
             
         ]);
 
         Association::create($request->all()) ; 
 
-        return redirect()->route('association.index')->with('success','L\'association a été créer avec succès.');
+        return redirect()->route('association.index')->with('success','Une nouvelle association a été créer avec succès.');
 
     }
 
@@ -89,7 +88,6 @@ class AdminAssociationController extends Controller
             'nom'=>'required',
             'date'=>'required',
             'description'=>'required',
-            'mini_description'=>'required'
         ]);
 
         $association->update($request->all());

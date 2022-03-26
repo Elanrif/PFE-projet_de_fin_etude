@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASSOCIATION ETUDIANTS</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{asset('css/component.css')}}">
 </head>
 <body>
@@ -62,7 +62,7 @@
         @auth
          <ul class="togle navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-         <a class="nav-link active fs-4" aria-current="page" href="{{route('login')}}"><button class="btn btn-outline-primary me-3"> <i class="fa-solid fa-user-shield"></i></a></button>
+         <button class="btn btn-outline-primary me-3"><a class="nav-link active fs-4" aria-current="page" href="{{route('login')}}"> <i class="fa-solid fa-user-shield me-2"></i>compte</a></button>
         </li>
      
         </ul>
@@ -186,7 +186,24 @@
      </div>  
      </div>
      <!-- -->
-      
+ 
+<div class="container mt-3">
+  <h3>Tooltip Options</h3>
+  <p>The <strong>autohide</strong> option hides the toast by default.</p>
+  <p>In this example, we use data-autohide="false" to show the toast by default. You can close it by clicking on the close (x) icon inside the toast header.</p>  
+
+  <div class="toast">
+    <div class="toast-header">
+      <strong class="mr-auto text-primary">Toast Header</strong>
+      <small class="text-muted">5 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">×</button>
+    </div>
+    <div class="toast-body">
+      Some text inside the toast body
+    </div>
+  </div>
+</div>
+
   <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

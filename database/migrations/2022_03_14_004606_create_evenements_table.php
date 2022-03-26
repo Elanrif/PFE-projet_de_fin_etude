@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nom');
             $table->date('date');
             $table->string('Lieu');
-            $table->foreignId('association_id')->constrained();
+            $table->foreignId('association_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

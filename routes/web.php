@@ -44,5 +44,9 @@ Route::resource('admin/bureau',BureauController::class) ;
 Route::resource('associations' ,AssociationController::class) ; 
 
 Route::resource('admin/page',AdminPageController::class) ; 
+route::get('toast',function()  { 
+
+    return view('toast') ; 
+});
  
 

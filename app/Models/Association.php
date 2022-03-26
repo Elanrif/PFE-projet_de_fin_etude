@@ -11,7 +11,7 @@ class Association extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nom' , 'date' , 'description' , 'mini_description','photo'] ; 
+    protected $fillable = ['nom' , 'date' , 'description' ,'photo'] ; 
 
     public function users(){ 
 
