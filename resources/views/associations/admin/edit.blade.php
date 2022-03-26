@@ -2,7 +2,7 @@
 @section('admin')
  
 <div class="container-fluid">
-    <form method="POST" class="my-5 py-5" action="{{ route('association.update',$association->id) }}">
+    <form method="POST" class="my-5 py-5" action="{{ route('association.update',$association->id) }}" enctype="multipart/form-data">
                         @csrf
 
                         @method('PUT')
@@ -35,7 +35,7 @@
                                <!-- <input id="description" type="text" class="form-floating fs-4 @error('description') is-invalid @enderror" name="description" value="{{ old('nom') }}" required autocomplete="description" autofocus > -->
                                
                                <div class="form-floating my-3">
-                                   <textarea class="form-control form-floating fs-4 @error('description') is-invalid @enderror" name="description" value="{{ old('nom') }}" required autocomplete="description" autofocus name="description"placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px">{{$association->description}}</textarea>
+                                   <textarea class="form-control form-floating fs-4 @error('description') is-invalid @enderror" name="description" value="{{ $association->description }}" required autocomplete="description" autofocus name="description"placeholder="Leave a comment here" id="floatingTextarea2" style="height: 250px">{{$association->description}}</textarea>
                                    <label for="floatingTextarea2">ecrire....</label>
                                 </div>
                                
@@ -46,10 +46,10 @@
                                 @enderror
                             </div>
 
-
+             
                              <label for="photo" class="pt-4 col-md-4 fs-3 col-form-label text-md-end">{{ __('photo') }}</label>
                             <div class="col-md-6 my-3">
-                                <input id="photo" type="text" class="form-control fs-4 @error('photo') is-invalid @enderror" name="photo" value="{{ $association->photo }}" required autocomplete="photo" autofocus placeholder=".jpeg ou .jpeg ">
+                                <input id="photo" type="file" class="form-control fs-4 @error('photo') is-invalid @enderror" name="photo" value="{{ ($association->photo) }}"  autocomplete="photo" autofocus placeholder=".jpeg ou .jpeg ">
 
                                 @error('photo')
                                     <span class="invalid-feedback" role="alert">
@@ -57,6 +57,7 @@
                                     </span>
                                 @enderror
                             </div>
+                            
 
                            <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">

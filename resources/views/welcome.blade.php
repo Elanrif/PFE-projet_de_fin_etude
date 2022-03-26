@@ -58,7 +58,7 @@
  
   <div class="owen pb-5">
     <!-- includer l'associations --> 
-  
+  @include('./associations/index')
   <!-- -->
 </div>
 

@@ -2,7 +2,7 @@
 @section('admin')
  
 <div class="container-fluid">
-    <form method="POST" class="my-5 py-5" action="{{ route('association.store') }}">
+    <form method="POST" class="my-5 py-5" action="{{ route('association.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row mb-3">
@@ -44,10 +44,10 @@
                                 @enderror
                             </div>
 
-
-                             <label for="photo" class="pt-4 col-md-4 fs-3 col-form-label text-md-end">{{ __('photo') }}</label>
+                            
+                             <label for="photo" class="pt-4 col-md-4 fs-3 col-form-label text-md-end">{{ __('choisir une image') }}</label>
                             <div class="my-3 col-md-6">
-                                <input id="photo" type="text" class="form-control fs-4 @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}" required autocomplete="photo" autofocus placeholder=".jpeg/png.... ">
+                                <input id="photo" type="file" class="form-control fs-4 @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') }}"  autocomplete="photo" autofocus placeholder=".jpeg/png.... ">
 
                                 @error('photo')
                                     <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                                     </span>
                                 @enderror
                             </div>
-
+                           
                            <div class="row mb-0 mt-3">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn ms-2 fs-5 btn-primary">

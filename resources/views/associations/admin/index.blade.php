@@ -7,7 +7,7 @@
 <div class="container-fluid">
    
   <div class="row g-5">
-  <div class="col-md-12">
+  <div class="col-sm-12">
  <table class="table table-black table-striped table-hover">
   <thead>
     <tr>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Association ; 
+use Illuminate\Support\Facades\Storage;
 
 class AdminAssociationController extends Controller
 {
@@ -32,20 +33,45 @@ class AdminAssociationController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
+     * $request->file('photo') ou bien $request->photo ; dans le .blade.php on a name="photo"
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+       
         $request->validate([
-            'nom'=>'required',
-            'date'=>'required',
-            'description'=>'required',
+            'nom'=>'required|string',
+            'date'=>'required|date',
+            'description'=>'required|string',
+            'photo'=>'required',
             
         ]);
 
-        Association::create($request->all()) ; 
+         // $path =  Storage::disk('public')->put('avatars', $request->photo); on aurait la même chose mais le nom du fichier serait regéneré et il allait nous embêter
+         // ici dans request->photo->storeAs on va partir de la fin de Storage 
+         /**
+          * pour dire on recupere la photo ($request->photo) et on la methode storeage::disk remplacé par storeAS() 
+          * 'avatars' le nom du dossier , $filename le nom que l'ont veut specifier et 'public' dans le DISK public
+
+          */
+        $filename = time() . '.' . $request->photo->extension() ;
+
+        $path = $request->photo->storeAs(
+            'avatars',
+            $filename,
+            'public',
+        );
+        
+       $association = Association::create(
+           [
+               'nom'=>$request->nom,
+               'date'=> $request->date , 
+               'description' =>$request->description,
+               'photo' => $path , 
+           ]
+       ) ; 
+        
 
         return redirect()->route('association.index')->with('success','Une nouvelle association a été créer avec succès.');
 
@@ -85,12 +111,27 @@ class AdminAssociationController extends Controller
     public function update(Request $request, Association $association)
     {
         $request->validate([
-            'nom'=>'required',
-            'date'=>'required',
-            'description'=>'required',
+            'nom'=>'required|string',
+            'date'=>'required|date',
+            'description'=>'required|string',
+            'photo'=>'required',
         ]);
 
-        $association->update($request->all());
+          $filename =time() . '.' . $request->photo->extension() ;
+
+        $path =  $request->photo->storeAs(
+            'avatars',
+            $filename,
+            'public',
+        );
+
+        $association->update([
+               'nom'=>$request->nom,
+               'date'=> $request->date , 
+               'description' =>$request->description,
+               'photo' => $path , 
+        ]);
+        
 
         return redirect()->route('association.index')->with('success' , 'L\'association a été modifier avec succès .') ; 
     }
@@ -106,6 +147,9 @@ class AdminAssociationController extends Controller
        $association->delete() ;
 
        return redirect()->route('association.index')->with('success','L\'association a été supprimé avec succès.');
-;
+
     }
+    
+  
+ 
 }

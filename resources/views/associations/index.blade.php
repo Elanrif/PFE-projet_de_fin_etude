@@ -4,7 +4,7 @@
   @foreach($associations as $association)
   <div class="col">
     <div class="card h-100">
-      <img src="{{asset('images/'.$association->photo)}}" class="card-img-top" alt="...">
+      <img src="{{ asset('storage/'.$association->photo) }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h4 class="card-title fw-bold">association : <span class="text-primary fw-bold">{{$association->nom}}</span></h5>
         <p class="card-text h5 fw-bold"> Date création : <span class="text-primary fw-bold"><i class="fa-solid fa-calendar-minus mx-1"></i> {{$association->date}}</span> </p>
