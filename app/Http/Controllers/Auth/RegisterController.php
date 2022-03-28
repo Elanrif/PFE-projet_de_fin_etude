@@ -56,7 +56,6 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'num_tel' => ['required','numeric','unique:users','digits:10'],
             'code_apogée'=>['required','numeric','unique:users','digits:8'],
-            'semestre' =>['required','string'],
             'filiere' =>['required','string'],
             
         ]);
@@ -77,7 +76,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'num_tel' => $data['num_tel'],
             'code_apogée'=> $data['code_apogée'],
-            'semestre' => $data['semestre'],
             'filiere' =>$data['filiere'],
             
         ]);

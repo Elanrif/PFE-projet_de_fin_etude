@@ -25,7 +25,6 @@ class User extends Authenticatable
         'code_apogée',
         'num_tel',
         'filiere',
-        'semestre',
         'role',
     ];
 

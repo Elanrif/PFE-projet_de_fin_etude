@@ -27,7 +27,7 @@
         <!-- permet juste de cacher le boutton si l'utilisateur n'est pas admin-->
           @if(auth()->check() AND auth()->user()->role == 'admin')
         <li class="nav-item px-3">
-          <a class="nav-link btn-outline-primary rounded-2 " href="{{route('utilisateur.index')}}"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
+          <a class="nav-link btn-outline-primary rounded-2 " href="{{route('user.index')}}"><i class="fa-solid fa-user-tie me-2"></i>Administrateur</a>
         </li>
         @endif
         <li class="nav-item px-3">
@@ -77,7 +77,6 @@
          @yield('content')
 
 
-   
    <!--  newsletter-->
 
      <div class="container-fluid" id="newsletter">
@@ -187,22 +186,6 @@
      </div>
      <!-- -->
  
-<div class="container mt-3">
-  <h3>Tooltip Options</h3>
-  <p>The <strong>autohide</strong> option hides the toast by default.</p>
-  <p>In this example, we use data-autohide="false" to show the toast by default. You can close it by clicking on the close (x) icon inside the toast header.</p>  
-
-  <div class="toast">
-    <div class="toast-header">
-      <strong class="mr-auto text-primary">Toast Header</strong>
-      <small class="text-muted">5 mins ago</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">×</button>
-    </div>
-    <div class="toast-body">
-      Some text inside the toast body
-    </div>
-  </div>
-</div>
 
   <script src="{{asset('js/app.js')}}"></script>
 </body>

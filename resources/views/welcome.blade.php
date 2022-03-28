@@ -23,8 +23,6 @@
  -->
 
 
-
-
 <!-- card en grande image en haut -->
 <div class="card mb-3 container-fluid">
  

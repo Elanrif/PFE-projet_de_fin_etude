@@ -40,7 +40,7 @@
           <a class="nav-link  btn-outline-primary text-light rounded-3 {{request()->is('/') ? 'active':''}}" aria-current="page" href="/"><i class="fa-solid fa-right-from-bracket me-2"></i>Acceuil</a>
         </li>
         <li class="nav-item my-3">
-          <a class="nav-link text-light btn-outline-primary rounded-3 {{ request()->is('admin/utilisateur')? 'active':'' }} " href="{{route('utilisateur.index')}}"><i class="fa-solid fa-users me-2"></i>Utilisateurs</a>
+          <a class="nav-link text-light btn-outline-primary rounded-3 {{ request()->is('admin/user')? 'active':'' }} " href="{{route('user.index')}}"><i class="fa-solid fa-users me-2"></i>Utilisateurs</a>
         </li>
         <li class="nav-item dropdown my-3">
           <a class="nav-link text-light dropdown-toggle btn-outline-primary rounded-3 {{request()->is('admin/bureau*')  ? 'active': ''}}" type="but" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,7 +76,7 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
+        </li> 
         <li class="nav-item my-3">
           <a class="nav-link disabled">Disabled</a>
         </li>
@@ -98,13 +98,5 @@
 <br><br><br>
  <!-- exemple -->
  <script src="{{ asset('js/app.js') }}" ></script>
- <script>
-$(document).ready(function(){
-$('#myBtn').click(function(){
-  $('.toast').toast({delay: 200000});
-  $('.toast').toast('show');
-});
-});
-</script>
 </body>
 </html>

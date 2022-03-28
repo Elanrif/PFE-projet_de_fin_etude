@@ -1,15 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin_page;
 use App\Http\Controllers\AdminAssociationController;
 use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\AssociationController;
-use App\Http\Controllers\AssociationUserController;
 use App\Http\Controllers\BureauController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\MembreController;
-use App\Http\Controllers\PhotoCommentController;
-use App\Http\Controllers\User;
 use App\Http\Controllers\UserController;
 use App\Models\Association;
 use Illuminate\Support\Facades\Auth;
@@ -39,14 +35,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('admin/association',AdminAssociationController::class) ; 
 Route::resource('admin/membre',MembreController::class);
 Route::resource('admin/evenement',EvenementController::class) ; 
-Route::resource('admin/utilisateur', UserController::class); 
+Route::resource('admin/user', UserController::class); 
 Route::resource('admin/bureau',BureauController::class) ; 
 Route::resource('associations' ,AssociationController::class) ; 
 
 Route::resource('admin/page',AdminPageController::class) ; 
-route::get('toast',function()  { 
 
-    return view('toast') ; 
-});
  
 

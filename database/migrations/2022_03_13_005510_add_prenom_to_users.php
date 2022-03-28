@@ -18,8 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('code_apogée')->unique()->after('password');
             $table->unsignedBigInteger('num_tel')->after('code_apogée');
             $table->string('filiere')->after('num_tel');
-            $table->string('semestre')->after('filiere');
-            $table->string('role')->default('utilisateur')->after('semestre');
+            $table->string('role')->default('utilisateur')->after('filiere');
             
         });
     }

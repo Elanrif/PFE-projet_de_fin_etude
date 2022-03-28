@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card"> 
                 <div class="card-header text-primary fs-5" >{{ __('Veuillez remplir le formulaire d\'inscription ') }}</div>
 
                 <div class="card-body">
@@ -87,28 +87,6 @@
                                <option value="SMC">SMC</option>   
                             </select>
                                 @error('filiere')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                         </div>
-
-                        <div class="row mb-3">
-                            <label for="semestre" class="col-md-4 fs-3 col-form-label text-md-end">{{ __('semestre') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="semestre" type="semestre" class="form-select fs-4 @error('semestre') is-invalid @enderror" name="semestre" value="{{ old('semestre') }}" required autocomplete="semestre">
-                               <option selected></option>
-                               <option value="S1">S1</option>
-                               <option value="S2">S2</option>
-                               <option value="S3">S3</option>
-                               <option value="S4">S4</option>   
-                               <option value="S5">S5</option>   
-                               <option value="S6">S6</option>   
-                              
-                            </select>
-                                @error('semestre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

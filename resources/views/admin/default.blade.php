@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('css/component.css')}}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
+</head> 
 <body>
 
 <div class="container-fluid">
@@ -24,7 +24,7 @@
         <a class="nav-link text-light btn-outline-primary {{request()->is('/') ? 'active':''}}" aria-current="page" href="/"><i class="fa-solid fa-house-chimney me-2"></i>Acceuil</a>
       </li>
       <li class="nav-item my-3" style="width:150px;">
-        <a class="nav-link text-light btn-outline-primary {{request()->is('admin/utilisateur') ? 'active':''}}" href="{{route('utilisateur.index')}}"><i class="fa-solid fa-person me-2"></i>Utilisateurs</a>
+        <a class="nav-link text-light btn-outline-primary {{request()->is('admin/utilisateur') ? 'active':''}}" href="{{route('user.index')}}"><i class="fa-solid fa-person me-2"></i>Utilisateurs</a>
       </li>
     
     </ul>
